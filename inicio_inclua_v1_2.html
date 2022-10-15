@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;800&display=swap" rel="stylesheet" />
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .antes_funciona {
+            background-color: #abd2cd;
+
+        }
+
+        .depois_funciona {
+            background-color: #abd2cd;
+
+        }
+
+        .como_funciona {
+            font-family: "Sora", sans-serif;
+            font-weight: 600;
+            font-size: 47px;
+            padding: 0 40px;
+            background-color: none;
+            grid-area: como_funciona;
+        }
+
+
+        .inclua-texto {
+            font-family: "Sora", sans-serif;
+            padding: 40px;
+            font-size: 30px;
+            grid-area: inclua;
+
+        }
+
+        .inclua-recursos-texto {
+            font-family: "Sora", sans-serif;
+            padding: 40px;
+            font-size: 30px;
+            grid-area: inclua-recursos
+        }
+
+        .guias {
+            font-family: "Sora", sans-serif;
+            grid-area: guias;
+        }
+
+        .biblioteca {
+            font-family: "Sora", sans-serif;
+            grid-area: biblioteca;
+        }
+
+        .inclua-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "inclua guias";
+        }
+
+
+        /* Diagnostico */
+
+        .diagnostico-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "diagnostico";
+        }
+
+
+
+        .diagnostico-container {
+            /* padding: 45px; */
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .diagnostico-container>div {
+            padding: 8px 35px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-family: "Sora", sans-serif;
+            font-weight: 600;
+            font-size: 47px;
+            grid-area: diagnostico;
+        }
+
+        .diagnostico-container>div:nth-child(1) {
+            background-color: #abd2cd;
+        }
+
+        .guias-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .biblioteca-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guias-container>div {
+            background-color: #abd2cd;
+            width: auto;
+            padding: 30px;
+            margin: 30px;
+            text-align: center;
+            line-height: 75px;
+            font-family: "Sora", sans-serif;
+            font-weight: 600;
+            font-size: 40px;
+            transition: 0.3s;
+
+        }
+
+        .guias-container>div:hover {
+            text-decoration: none;
+            background-color: #ffffff;
+            border-color: #000000;
+            border-style: solid;
+            border-width: thin;
+        }
+
+
+        .guias-container>div>a {
+            color: #000000;
+            text-decoration: none;
+
+        }
+
+
+        .inclua-texto>p.linha {
+            border-color: #abd2cd;
+            border-bottom-style: solid;
+            padding-top: 25px;
+            width: 25%;
+        }
+
+        .inclua-recursos-texto>p.linha {
+            border-color: #abd2cd;
+            border-bottom-style: solid;
+            padding-top: 25px;
+            width: 25%;
+        }
+
+        /* MEDIA QUERY */
+        @media (max-width: 768px) {
+            .inclua-grid {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 1fr 500px;
+                grid-template-areas: "inclua inclua"
+                    "guias guias";
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="containe-fluid">
+        <div class="row">
+            <div class="col antes_funciona">
+
+            </div>
+            <div class="col-md-auto como_funciona">
+                COMO FUNCIONA </div>
+            <div class="col col-lg-2 depois_funciona">
+
+            </div>
+        </div>
+    </div>
+
+    <!--Diagnostico-->
+
+    <section class="diagnostico-grid">
+        <section class="diagnostico-container">
+            <div>1</div>
+            <div>Diagnóstico</div>
+        </section>
+        </div>
+        <section class="inclua-grid">
+            <section class="inclua-texto">
+                <p>A INCLUA auxilia equipes que executam ofertas públicas (programas, projetos, ações ou serviços) a
+                    avaliar
+                    a qualidade do acesso e da experiência dos cidadãos atendidos, chamando atenção para os riscos de
+                    desatenção, tratamento inadequado e exclusão de segmentos específicos.</p>
+
+                <p> O diagnóstico é um exercício de autorreflexão, formação e qualificação contínua e pode ser realizado
+                    por
+                    meio do Guia INCLUA ou pelo diagnóstico online.</p>
+
+                <p> Vamos lá?</p>
+                <!--Linha azul-->
+                <p class="linha"></p>
+
+            </section>
+            <section class="guias">
+                <div class="guias-container">
+                    <div><a href="#">GUIAS</a></div>
+                    <div><a href="#">DIAGNÓSTICO ONLINE</a></div>
+                </div>
+            </section>
+        </section>
+    </section>
+    <!--Diagnostico Fim-->
+
+
+</body>
+
+</html>
