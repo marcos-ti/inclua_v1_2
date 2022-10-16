@@ -9,6 +9,10 @@
 
 <head>
     <style>
+        body {
+            overflow-x: hidden;
+        }
+
         * {
             padding: 0;
             margin: 0;
@@ -158,11 +162,23 @@
         @media (max-width: 768px) {
             .inclua-grid {
                 display: grid;
-                grid-template-columns: auto;
+                grid-template-columns: 1fr;
                 grid-template-rows: 1fr 500px;
                 grid-template-areas: "inclua inclua"
                     "guias guias";
             }
+
+            .como_funciona {
+                font-family: "Sora", sans-serif;
+                font-weight: 600;
+                font-size: 40px;
+                padding: 0 40px;
+                background-color: none;
+                background-color: #abd2cd;
+                grid-area: como_funciona;
+            }
+
+
         }
     </style>
 </head>
@@ -170,7 +186,7 @@
 <body>
 
 
-    <div class="containe-fluid">
+    <div class="containe-fluid pb-5">
         <div class="row">
             <div class="col antes_funciona">
 
